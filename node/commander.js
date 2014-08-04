@@ -9,13 +9,13 @@
     ////////////////////////////////////////////////////////////////////////////////
 
     exports.init = function (manager) {
-        if (!manager.hasDomain('phplint'))
-            manager.registerDomain('phplint', {
+        if (!manager.hasDomain('lesslint'))
+            manager.registerDomain('lesslint', {
                 major: 1,
                 minor: 0
             });
 
-        manager.registerCommand('phplint', 'commander', commander, true);
+        manager.registerCommand('lesslint', 'commander', commander, true);
     };
 
     ////////////////////////////////////////////////////////////////////////////////
