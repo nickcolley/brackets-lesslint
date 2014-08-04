@@ -16,7 +16,7 @@ define(function (require, exports, module) {
 
     function loadErrorsFor(fullPath) {
         // Load errors for given path
-        node.domains.phplint.commander('php -d display_errors=1 -d error_reporting=-1 -l "' + fullPath + '"').done(function (data) {
+        node.domains.phplint.commander('lessc -l "' + fullPath + '"').done(function (data) {
             var match = /(.+) in (.+) on line (\d+)/.exec(data);
             console.log("Matched data : " + JSON.stringify(data) + " \n Matches:" + JSON.stringify(match));
             var type = data.indexOf('error') > -1 ? CodeInspection.Type.ERROR : CodeInspection.Type.WARNING;
@@ -59,9 +59,9 @@ define(function (require, exports, module) {
         loadForCurrent();
         $(docuManager).on('documentSaved', loadForCurrent);
 
-        // Register for PHP files
-        CodeInspection.register("php", {
-            name: "PHPLint",
+        // Register for LESS files
+        CodeInspection.register("less", {
+            name: "LESSLint",
             scanFile: function (text, fullPath) {
                 return {
                     errors: errors
@@ -70,7 +70,7 @@ define(function (require, exports, module) {
         });
     }
 
-    if (!node.domains.phplint) {
+    if (!node.domains.lesslint) {
         node.connect(true).done(function () {
             var path = ext_utils.getModulePath(module, 'node/commander.js');
             node.loadDomains([path], true).done(function () {
