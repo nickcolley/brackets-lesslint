@@ -1,35 +1,34 @@
 {
-    "name": "com.doersguild.brackets.phplint",
-    "version": "1.0.2",
-    "description": "`php -l` powered PHP-lint extension for Brackets",
-    "title": "PHPLint for Brackets",
+    "name": "lesslint",
+    "version": "0.0.1",
+    "description": "`lessc -l` powered LESSLint extension for Brackets",
+    "title": "LESSLint for Brackets",
     "scripts": {},
     "repository": {
         "type": "git",
-        "url": "https://github.com/DoersGuild/brackets-phplint.git"
+        "url": "https://github.com/nickcolley/brackets-lesslint"
     },
     "dependencies": {
         "child_process": "*"
     },
     "keywords": [
-        "phplint",
+        "lesslint",
         "brackets",
-        "php",
+        "less",
         "linting",
-        "codequality",
-        "inspection"
+        "node",
+        "css"
     ],
     "engines": {
         "brackets": ">=0.30.0"
     },
     "author": {
-        "name": "Sathvik",
-        "email": "sathvik@doersguild.com",
-        "url": "http://doersguild.com/"
+        "name": "Nick Colley",
+        "email": "nickcolley7@gmail.com"
     },
-    "homepage": "https://github.com/DoersGuild/brackets-phplint",
+    "homepage": "https://github.com/nickcolley/brackets-lesslint",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/doersguild/brackets-phplint/issues"
+        "url": "https://github.com/nickcolley/brackets-lesslint/issues"
     }
 }
