@@ -20,7 +20,7 @@ define(function (require, exports, module) {
             var match = /(.+) in (.+) on line (\d+)/.exec(data);
             console.log("Matched data : " + JSON.stringify(data) + " \n Matches:" + JSON.stringify(match));
             var type = data.indexOf('error') > -1 ? CodeInspection.Type.ERROR : CodeInspection.Type.WARNING;
-            if (data.indexOf('No syntax errors detected') === -1) {
+            if (data.length > 0) {
                 errors = [{
                     pos: {
                         line: parseInt(match[3], 10)
