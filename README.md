@@ -1,8 +1,10 @@
-[Brackets](http://brackets.io) - PHPLint
+[Brackets](http://brackets.io) - LESSLint
 ============================
 
-PHPLint Extension for Brackets, using the [`php -l`](http://www.php.net/manual/en/features.commandline.options.php) commandline option
+PHPLint Extension for Brackets, using the [`lessc -l`](http://lesscss.org/usage/#command-line-usage-lint) commandline option
 
-Requires `php` to be available in your [system path](http://www.php.net/manual/en/install.windows.commandline.php)
+Requires `lessc` to be available in your [system path](http://lesscss.org/usage/#command-line-usage-installing-lessc-for-use-globally)
 
 Licence: MIT
+
+Based on https://github.com/DoersGuild/brackets-phplint
