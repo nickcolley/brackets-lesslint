@@ -1,7 +1,7 @@
 /*global define, brackets */
 
 /**
- * Provides phplint results via the core linting extension point
+ * Provides lesslint results via the core linting extension point
  */
 define(function (require, exports, module) {
     "use strict";
@@ -16,7 +16,7 @@ define(function (require, exports, module) {
 
     function loadErrorsFor(fullPath) {
         // Load errors for given path
-        node.domains.phplint.commander('lessc --no-color -l "' + fullPath + '"').done(function (data) {
+        node.domains.lesslint.commander('lessc --no-color -l "' + fullPath + '"').done(function (data) {
             var match = /(.+) in (.+) on line (\d+)/.exec(data);
             console.log("Matched data : " + JSON.stringify(data) + " \n Matches:" + JSON.stringify(match));
             var type = data.indexOf('Error') > -1 ? CodeInspection.Type.ERROR : CodeInspection.Type.WARNING;
